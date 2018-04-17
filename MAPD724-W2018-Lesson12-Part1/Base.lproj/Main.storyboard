@@ -87,6 +87,9 @@
                             <constraint firstItem="dnS-Vd-NoQ" firstAttribute="leading" secondItem="tT9-qz-ZE5" secondAttribute="leading" id="rH0-gv-OR2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="map" destination="8bL-Fn-kwV" id="D07-br-VGu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
