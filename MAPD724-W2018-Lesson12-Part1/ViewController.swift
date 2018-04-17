@@ -4,15 +4,15 @@ import MapKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var map: MKMapView!
-
+    @IBOutlet weak var latTF: UITextField!
+    @IBOutlet weak var magTF: UITextField!
+    @IBOutlet weak var longTF: UITextField!
+    
+    
     let defaultLongitude = -79.3832
     let defaultLatitude = 43.6532
     let delta = 5.0
     let mapLocation = CLLocationCoordinate2DMake(43.6532, -79.3832)
-    
-    @IBOutlet weak var latTF: UITextField!
-    @IBOutlet weak var magTF: UITextField!
-    @IBOutlet weak var longTF: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
