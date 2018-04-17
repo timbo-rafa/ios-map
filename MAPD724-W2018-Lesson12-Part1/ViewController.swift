@@ -17,17 +17,27 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let loc = CLLocationCoordinate2DMake(defaultLatitude, defaultLongitude)
-        let span = MKCoordinateSpanMake(delta , delta)
-        let reg = MKCoordinateRegionMake(loc, span)
-        
-        self.map.region = reg
+        latTF.text = String(defaultLatitude)
+        longTF.text = String(defaultLongitude)
+        magTF.text = String(delta)
+        self.updateMap(lat: defaultLatitude, long: defaultLongitude, delta: delta)
         
         let ann = MKPointAnnotation()
         ann.coordinate = self.mapLocation
         ann.title = "Toronto"
         ann.subtitle = "A place's that really cool"
         self.map.addAnnotation(ann)
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+    }
+    
+    func updateMap( lat: Double, long: Double, delta: Double) {
+        let loc = CLLocationCoordinate2DMake(lat, long)
+        let span = MKCoordinateSpanMake(delta , delta)
+        let reg = MKCoordinateRegionMake(loc, span)
+        
+        self.map.region = reg
     }
     
     @IBAction func seeInMapApp(_ sender: UIButton) {
@@ -40,6 +50,15 @@ class ViewController: UIViewController {
             MKLaunchOptionsMapCenterKey: self.map.region.center,
             MKLaunchOptionsMapSpanKey: self.map.region.span
             ])
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+    @IBAction func search(_ sender: UIButton) {
+        self.updateMap(lat: Double(latTF.text!)!, long: Double(longTF.text!)!, delta: Double(magTF.text!)!)
     }
 
 }
