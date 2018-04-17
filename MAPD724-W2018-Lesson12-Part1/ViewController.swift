@@ -21,12 +21,7 @@ class ViewController: UIViewController {
         longTF.text = String(defaultLongitude)
         magTF.text = String(delta)
         self.updateMap(lat: defaultLatitude, long: defaultLongitude, delta: delta)
-        
-        let ann = MKPointAnnotation()
-        ann.coordinate = self.mapLocation
-        ann.title = "Toronto"
-        ann.subtitle = "A place's that really cool"
-        self.map.addAnnotation(ann)
+        self.updateAnn(title: "Toronto", subtitle: "A place that's really cool")
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
@@ -40,11 +35,19 @@ class ViewController: UIViewController {
         self.map.region = reg
     }
     
+    func updateAnn(title: String, subtitle: String) {
+        let ann = MKPointAnnotation()
+        ann.coordinate = self.map.region.center
+        ann.title = title
+        ann.subtitle = subtitle
+        self.map.addAnnotation(ann)
+    }
+    
     @IBAction func seeInMapApp(_ sender: UIButton) {
         let placemark = MKPlacemark(coordinate: self.mapLocation, addressDictionary: nil)
         let mapItem = MKMapItem(placemark: placemark)
         
-        mapItem.name = "A really icy place"
+        mapItem.name = "Your Location"
         mapItem.openInMaps(launchOptions: [
             MKLaunchOptionsMapTypeKey: MKMapType.standard.rawValue,
             MKLaunchOptionsMapCenterKey: self.map.region.center,
@@ -59,6 +62,8 @@ class ViewController: UIViewController {
     
     @IBAction func search(_ sender: UIButton) {
         self.updateMap(lat: Double(latTF.text!)!, long: Double(longTF.text!)!, delta: Double(magTF.text!)!)
+        self.map.removeAnnotations(self.map.annotations)
+        self.updateAnn(title: "Your Location", subtitle: "chosen in a really cool app")
     }
 
 }
