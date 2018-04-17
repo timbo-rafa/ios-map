@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func seeInMapApp(_ sender: UIButton) {
-        let placemark = MKPlacemark(coordinate: self.mapLocation, addressDictionary: nil)
+        let placemark = MKPlacemark(coordinate: self.map.region.center, addressDictionary: nil)
         let mapItem = MKMapItem(placemark: placemark)
         
         mapItem.name = "Your Location"
