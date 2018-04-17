@@ -19,6 +19,11 @@ class ViewController: UIViewController {
         
         self.map.region = reg
         
+        let ann = MKPointAnnotation()
+        ann.coordinate = self.mapLocation
+        ann.title = "Toronto"
+        ann.subtitle = "A place's that really cool"
+        self.map.addAnnotation(ann)
     }
 
 }
