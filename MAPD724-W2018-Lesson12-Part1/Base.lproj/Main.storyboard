@@ -158,7 +158,7 @@
                                 </constraints>
                                 <state key="normal" title="gps" image="gps.png"/>
                                 <connections>
-                                    <action selector="doFindMe2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7WR-0w-xFT"/>
+                                    <action selector="whereAmI2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r0V-qk-aoC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcw-iU-lDF">
@@ -168,7 +168,7 @@
                                 </constraints>
                                 <state key="normal" title="gpsoff" image="gpsoff.png"/>
                                 <connections>
-                                    <action selector="whereAmI2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hg8-Zz-X0e"/>
+                                    <action selector="doFindMe2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7aj-hw-9rs"/>
                                 </connections>
                             </button>
                         </subviews>
