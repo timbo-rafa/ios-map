@@ -15,6 +15,9 @@
 		3F5653302085678F007BDD12 /* MAPD724_W2018_Lesson12_Part1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F56532F2085678F007BDD12 /* MAPD724_W2018_Lesson12_Part1Tests.swift */; };
 		3F56533B2085678F007BDD12 /* MAPD724_W2018_Lesson12_Part1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F56533A2085678F007BDD12 /* MAPD724_W2018_Lesson12_Part1UITests.swift */; };
 		3FF90A9320895C2800B63432 /* ManagerHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF90A9220895C2800B63432 /* ManagerHolder.swift */; };
+		3FF90A9720896EB800B63432 /* gps.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF90A9420896EB800B63432 /* gps.png */; };
+		3FF90A9820896EB800B63432 /* gps@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF90A9520896EB800B63432 /* gps@2x.png */; };
+		3FF90A9920896EB800B63432 /* gps@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF90A9620896EB800B63432 /* gps@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		3F56533A2085678F007BDD12 /* MAPD724_W2018_Lesson12_Part1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAPD724_W2018_Lesson12_Part1UITests.swift; sourceTree = "<group>"; };
 		3F56533C2085678F007BDD12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FF90A9220895C2800B63432 /* ManagerHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerHolder.swift; sourceTree = "<group>"; };
+		3FF90A9420896EB800B63432 /* gps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gps.png; path = ../../gps.png; sourceTree = "<group>"; };
+		3FF90A9520896EB800B63432 /* gps@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gps@2x.png"; path = "../../gps@2x.png"; sourceTree = "<group>"; };
+		3FF90A9620896EB800B63432 /* gps@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gps@3x.png"; path = "../../gps@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				3F5653232085678F007BDD12 /* LaunchScreen.storyboard */,
 				3F5653262085678F007BDD12 /* Info.plist */,
 				3FF90A9220895C2800B63432 /* ManagerHolder.swift */,
+				3FF90A9420896EB800B63432 /* gps.png */,
+				3FF90A9520896EB800B63432 /* gps@2x.png */,
+				3FF90A9620896EB800B63432 /* gps@3x.png */,
 			);
 			path = "MAPD724-W2018-Lesson12-Part1";
 			sourceTree = "<group>";
@@ -238,7 +247,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FF90A9720896EB800B63432 /* gps.png in Resources */,
 				3F5653252085678F007BDD12 /* LaunchScreen.storyboard in Resources */,
+				3FF90A9920896EB800B63432 /* gps@3x.png in Resources */,
+				3FF90A9820896EB800B63432 /* gps@2x.png in Resources */,
 				3F5653222085678F007BDD12 /* Assets.xcassets in Resources */,
 				3F5653202085678F007BDD12 /* Main.storyboard in Resources */,
 			);

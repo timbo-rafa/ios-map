@@ -11,8 +11,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     let defaultLongitude = -79.3832
     let defaultLatitude = 43.6532
-    let delta = 5.0
-    let mapLocation = CLLocationCoordinate2DMake(43.6532, -79.3832)
+    let delta = 0.01
+    //let mapLocation = CLLocationCoordinate2DMake(43.6532, -79.3832)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
+        _testAlwaysRequest()
     }
     
     func updateMap( lat: Double, long: Double, delta: Double) {
@@ -60,7 +62,22 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         view.endEditing(true)
     }
     
+    func updateFromGPS(coord : CLLocationCoordinate2D) {
+        updateTextFields(lat: "\(coord.latitude)", long: "\(coord.longitude)", mag: "\(delta)")
+        _search()
+    }
+    
+    func updateTextFields(lat: String, long: String, mag: String) {
+        latTF.text = lat
+        longTF.text = long
+        magTF.text = mag
+    }
+    
     @IBAction func search(_ sender: UIButton) {
+        _search()
+    }
+    
+    func _search() {
         self.updateMap(lat: Double(latTF.text!)!, long: Double(longTF.text!)!, delta: Double(magTF.text!)!)
         self.map.removeAnnotations(self.map.annotations)
         self.updateAnn(title: "Your Location", subtitle: "chosen in a really cool app")
@@ -112,6 +129,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func testAlwaysRequest2(_ sender: UIButton) {
+        _testAlwaysRequest()
+    }
+    
+    func _testAlwaysRequest() {
         self.managerHolder.checkForLocationAccess(always:true)
     }
     
@@ -120,7 +141,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.output = ""
     }
     
-    @IBAction func doFindMe2(_ sender: Any) {
+    @IBAction func doFindMe2(_ sender: UIButton) {
         self.managerHolder.checkForLocationAccess() {
             self.which = 1
             self.reallyFindMe()
@@ -189,6 +210,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             let elapsed = time.timeIntervalSince(self.startTime)
             if elapsed > REQ_TIME {
                 print("This is taking too long", to:&output)
+                updateFromGPS(coord: coord)
                 print("You might be at \(coord.latitude) \(coord.longitude)", to:&output)
                 self.stopTrying()
                 return
@@ -197,11 +219,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 return // wait for the next one
             }
             // got it
+            updateFromGPS(coord: coord)
             print("You are at \(coord.latitude) \(coord.longitude)", to:&output)
             self.stopTrying()
         case 2:
             let loc = locations.last!
             let coord = loc.coordinate
+            updateFromGPS(coord: coord)
             print("The quick way: You are at \(coord.latitude) \(coord.longitude)", to:&output)
             // bug: can be called twice in quick succession
         // ok, the bug is gone; it seems that we just get the cached value the second time
