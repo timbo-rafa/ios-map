@@ -69,7 +69,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     
     
-    
     // EXTERNAL SOURCE CODE
     
     var output = "" {
