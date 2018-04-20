@@ -14,6 +14,7 @@
 		3F5653252085678F007BDD12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F5653232085678F007BDD12 /* LaunchScreen.storyboard */; };
 		3F5653302085678F007BDD12 /* MAPD724_W2018_Lesson12_Part1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F56532F2085678F007BDD12 /* MAPD724_W2018_Lesson12_Part1Tests.swift */; };
 		3F56533B2085678F007BDD12 /* MAPD724_W2018_Lesson12_Part1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F56533A2085678F007BDD12 /* MAPD724_W2018_Lesson12_Part1UITests.swift */; };
+		3FF90A9320895C2800B63432 /* ManagerHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF90A9220895C2800B63432 /* ManagerHolder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		3F5653362085678F007BDD12 /* MAPD724-W2018-Lesson12-Part1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MAPD724-W2018-Lesson12-Part1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F56533A2085678F007BDD12 /* MAPD724_W2018_Lesson12_Part1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAPD724_W2018_Lesson12_Part1UITests.swift; sourceTree = "<group>"; };
 		3F56533C2085678F007BDD12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FF90A9220895C2800B63432 /* ManagerHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerHolder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				3F5653212085678F007BDD12 /* Assets.xcassets */,
 				3F5653232085678F007BDD12 /* LaunchScreen.storyboard */,
 				3F5653262085678F007BDD12 /* Info.plist */,
+				3FF90A9220895C2800B63432 /* ManagerHolder.swift */,
 			);
 			path = "MAPD724-W2018-Lesson12-Part1";
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FF90A9320895C2800B63432 /* ManagerHolder.swift in Sources */,
 				3F56531D2085678F007BDD12 /* ViewController.swift in Sources */,
 				3F56531B2085678F007BDD12 /* AppDelegate.swift in Sources */,
 			);
@@ -514,6 +518,7 @@
 				3F5653412085678F007BDD12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F5653422085678F007BDD12 /* Build configuration list for PBXNativeTarget "MAPD724-W2018-Lesson12-Part1Tests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +527,7 @@
 				3F5653442085678F007BDD12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F5653452085678F007BDD12 /* Build configuration list for PBXNativeTarget "MAPD724-W2018-Lesson12-Part1UITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +536,7 @@
 				3F5653472085678F007BDD12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
