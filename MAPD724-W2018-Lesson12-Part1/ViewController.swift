@@ -8,12 +8,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var magTF: UITextField!
     @IBOutlet weak var longTF: UITextField!
     
-    
     let defaultLongitude = -79.3832
     let defaultLatitude = 43.6532
     let delta = 0.01
     //let mapLocation = CLLocationCoordinate2DMake(43.6532, -79.3832)
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

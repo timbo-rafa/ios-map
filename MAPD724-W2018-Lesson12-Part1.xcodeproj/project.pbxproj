@@ -18,6 +18,9 @@
 		3FF90A9720896EB800B63432 /* gps.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF90A9420896EB800B63432 /* gps.png */; };
 		3FF90A9820896EB800B63432 /* gps@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF90A9520896EB800B63432 /* gps@2x.png */; };
 		3FF90A9920896EB800B63432 /* gps@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF90A9620896EB800B63432 /* gps@3x.png */; };
+		3FF90A9D20897B1700B63432 /* gpsoff.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF90A9A20897B1700B63432 /* gpsoff.png */; };
+		3FF90A9E20897B1700B63432 /* gpsoff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF90A9B20897B1700B63432 /* gpsoff@2x.png */; };
+		3FF90A9F20897B1700B63432 /* gpsoff@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF90A9C20897B1700B63432 /* gpsoff@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		3FF90A9420896EB800B63432 /* gps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gps.png; path = ../../gps.png; sourceTree = "<group>"; };
 		3FF90A9520896EB800B63432 /* gps@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gps@2x.png"; path = "../../gps@2x.png"; sourceTree = "<group>"; };
 		3FF90A9620896EB800B63432 /* gps@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gps@3x.png"; path = "../../gps@3x.png"; sourceTree = "<group>"; };
+		3FF90A9A20897B1700B63432 /* gpsoff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gpsoff.png; path = ../../gpsoff.png; sourceTree = "<group>"; };
+		3FF90A9B20897B1700B63432 /* gpsoff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gpsoff@2x.png"; path = "../../gpsoff@2x.png"; sourceTree = "<group>"; };
+		3FF90A9C20897B1700B63432 /* gpsoff@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gpsoff@3x.png"; path = "../../gpsoff@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,9 @@
 				3FF90A9420896EB800B63432 /* gps.png */,
 				3FF90A9520896EB800B63432 /* gps@2x.png */,
 				3FF90A9620896EB800B63432 /* gps@3x.png */,
+				3FF90A9A20897B1700B63432 /* gpsoff.png */,
+				3FF90A9B20897B1700B63432 /* gpsoff@2x.png */,
+				3FF90A9C20897B1700B63432 /* gpsoff@3x.png */,
 			);
 			path = "MAPD724-W2018-Lesson12-Part1";
 			sourceTree = "<group>";
@@ -249,10 +258,13 @@
 			files = (
 				3FF90A9720896EB800B63432 /* gps.png in Resources */,
 				3F5653252085678F007BDD12 /* LaunchScreen.storyboard in Resources */,
+				3FF90A9F20897B1700B63432 /* gpsoff@3x.png in Resources */,
 				3FF90A9920896EB800B63432 /* gps@3x.png in Resources */,
 				3FF90A9820896EB800B63432 /* gps@2x.png in Resources */,
+				3FF90A9D20897B1700B63432 /* gpsoff.png in Resources */,
 				3F5653222085678F007BDD12 /* Assets.xcassets in Resources */,
 				3F5653202085678F007BDD12 /* Main.storyboard in Resources */,
+				3FF90A9E20897B1700B63432 /* gpsoff@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
